@@ -10,9 +10,9 @@ class Cargo(Ship):
         
     def is_worth_it(self):
         peso= self.draft
-        if self.quality==1:
+        if self.quality==1 :
             peso=peso+3.5
-        elif self.quality==0.5:
+        elif self.quiality==0.5:
             peso=peso+2
         elif self.quality==0.25:
             peso=peso+0.5
