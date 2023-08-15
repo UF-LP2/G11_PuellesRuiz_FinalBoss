@@ -1,3 +1,4 @@
+import pandas as pd
 from src.ship import Ship
 from src.cargo import Cargo
 from src.cruise import Cruise 
@@ -7,10 +8,25 @@ def main() -> None:
   #except FileNotFoundError:
    # print("Hubo un error al leer el archivo")
     #leer archivo y cargarlo en el vector barcos
-    barco1=Ship(10,1)
-    barco2=Cruise(1,10,1)
-    barco3=Cargo(2,1,10,1)
-    barcos=[barco1, barco2, barco3]
+    barcos_csv=[]
+    df = pd.read_csv('ships.csv', delimiter=',')
+
+    barcos = []
+    for indice, fila in df.iterrows():
+      draft=fila['draft']
+      crew=fila['crew']
+      if(fila['extra']==''):
+        aux_ship=Ship(draft, crew)
+        barcos.append(aux_ship)
+      else:
+        extra=fila['extra']
+      if(fila['quality']==''):
+        aux_cruise=Cruise(draft, crew, extra)
+        barcos.append(aux_cruise)
+      else:
+        quality=fila['quality']
+        aux_cargo=Cargo(extra, quality, draft, crew)
+        barcos.append(aux_cargo)
     for barco in barcos:
       try:
         barco.is_worth_it()
@@ -18,7 +34,7 @@ def main() -> None:
         print("ERROR:", str(e))
       else:
         print("Merece ser saqueado")
-
+  
 
 if __name__ == "__main__":
   main()
