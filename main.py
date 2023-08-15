@@ -3,11 +3,7 @@ from src.ship import Ship
 from src.cargo import Cargo
 from src.cruise import Cruise 
 def main() -> None:
-  #try:
-   # archivo=open("ships.csv","r")
-  #except FileNotFoundError:
-   # print("Hubo un error al leer el archivo")
-    #leer archivo y cargarlo en el vector barcos
+
     barcos_csv=[]
     df = pd.read_csv('ships.csv', delimiter=',')
 
