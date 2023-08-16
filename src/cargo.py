@@ -12,11 +12,11 @@ class Cargo(Ship):
         peso= self.draft
         if self.quality==1 :
             peso=peso+3.5
-        elif self.quiality==0.5:
+        elif self.quality==0.5:
             peso=peso+2
         elif self.quality==0.25:
             peso=peso+0.5
-        peso= peso-self.crew*1.5
+        peso= peso- (self.crew*1.5)
         if peso<20:
             raise Exception("el botin es menor a 20")
         return peso

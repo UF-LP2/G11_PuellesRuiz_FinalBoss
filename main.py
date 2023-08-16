@@ -25,7 +25,7 @@ def main() -> None:
         barcos.append(aux_cargo)
     for barco in barcos:
       try:
-        barco.is_worth_it()
+        print(barco.is_worth_it())
       except Exception as e:
         print("ERROR:", str(e))
       else:
