@@ -1,7 +1,7 @@
 import pandas as pd
 from src.ship import Ship
-from src.cargo import Cargo
-from src.cruise import Cruise 
+from src.ship  import Cargo
+from src.ship  import Cruise 
 def main() -> None:
 
     barcos_csv=[]

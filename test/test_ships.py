@@ -11,3 +11,5 @@ def test_ship2():
     barco2=Ship(20,1)
     with pytest.raises(Exception):
         barco2.is_worth_it()
+
+
