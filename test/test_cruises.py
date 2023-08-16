@@ -2,7 +2,7 @@ from os.path import exists
 import pytest
 import sys
 sys.path.append(r".\G11_PuellesRuiz_FinalBoss")
-from src.ship  import Cruise
+from src.ships  import Cruise
 
 def test_cruise(): 
     crucero1=Cruise(20, 2000, 15)
