@@ -3,7 +3,7 @@ import pytest
 import sys
 sys.path.append(r".\G11_PuellesRuiz_FinalBoss")
 
-from src.ship import Cargo
+from src.ships import Cargo
 
 def test_cargo(): 
     cargo1=Cargo(15, 1, 5000, 40)

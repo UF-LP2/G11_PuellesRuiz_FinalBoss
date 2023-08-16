@@ -2,7 +2,7 @@ from os.path import exists
 import pytest
 import sys
 sys.path.append(r".\G11_PuellesRuiz_FinalBoss")
-from src.ship import Ship
+from src.ships import Ship
 
 def test_ship1(): 
     barco1=Ship(50,1)
